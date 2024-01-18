@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+
+function desenhaQuadradoComBorda(x, y, z, w, colour){
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = colour;
+pincel.fillRect(x, y, z, w);
+pincel.fillStroke = "black";//borda //para trocar a cor se usa "pincel.strokeStyle"
+pincel.strokeRect(x, y, z, w);
+
+}
+
+desenhaQuadradoComBorda(0, 0, 50, 50, "red");
+desenhaQuadradoComBorda(0, 50, 50, 50, "blue");
+desenhaQuadradoComBorda(0, 100, 50, 50, "green");
+desenhaQuadradoComBorda(50, 0, 50, 150, "yellow");
+
+
+</script>
